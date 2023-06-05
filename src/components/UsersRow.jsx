@@ -7,7 +7,7 @@ export const UsersRow = ({ id, username, email }) => {
 
     return (
         <tr>
-            {/* <td>{id}</td> */}
+            <td>{id}</td>
             <td>{username}</td>
             <td>{email}</td>
             <td>

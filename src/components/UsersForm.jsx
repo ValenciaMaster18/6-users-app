@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import Swal from "sweetalert2"
 import { UserContext } from "../context/UserContext"
 
-export const UsersForm = ({ userSelect, setVisibleForm }) => {
+export const UsersForm = ({ userSelect, setVisibleForm, errors }) => {
     const {handlerAddUser, initialUsersForm} = useContext(UserContext)
 
     const [userForm, setUserForm] = useState(initialUsersForm)
@@ -47,6 +47,7 @@ export const UsersForm = ({ userSelect, setVisibleForm }) => {
                 className="form-control my-3 w-75"
                 onChange={onInputChange}
             />
+            {/* <p className="text-danger">{errors?.username}</p> */}
             <input
                 type="email"
                 placeholder="Email"
@@ -55,6 +56,7 @@ export const UsersForm = ({ userSelect, setVisibleForm }) => {
                 className="form-control my-3 w-75"
                 onChange={onInputChange}
             />
+            {/* <p className="text-danger">{errors?.email}</p> */}
             {id > 0 || <input
                 type="password"
                 placeholder="Password"
@@ -64,6 +66,7 @@ export const UsersForm = ({ userSelect, setVisibleForm }) => {
                 onChange={onInputChange}
             />
             }
+            {/* <p className="text-danger">{errors?.password}</p> */}
 
             <input type="hidden"
                 name="id"

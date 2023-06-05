@@ -8,10 +8,12 @@ export const UserProvider = ({ children }) => {
         userSelect,
         initialUsersForm,
         visibleForm,
+        errors,
         setVisibleForm,
         handlerAddUser,
         handlerRemoveUser,
-        handlerSelectUser
+        handlerSelectUser,
+        getUsers,
     } = useUsers()
 
     return (
@@ -21,10 +23,12 @@ export const UserProvider = ({ children }) => {
                 userSelect,
                 initialUsersForm,
                 visibleForm,
+                errors,
                 setVisibleForm,
                 handlerAddUser,
                 handlerRemoveUser,
-                handlerSelectUser
+                handlerSelectUser,
+                getUsers
             }
         }>
             {children}

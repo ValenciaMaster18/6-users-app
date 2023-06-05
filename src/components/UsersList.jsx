@@ -9,7 +9,7 @@ export const UsersList = () => {
         <table className="table table-hover table-striped">
             <thead>
                 <tr>
-                    {/* <th>#</th> */}
+                    <th>#</th>
                     <th>Username</th>
                     <th>Email</th>
                     <th>actions</th>
